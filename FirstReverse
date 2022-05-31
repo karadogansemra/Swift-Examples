@@ -1,0 +1,8 @@
+func FirstReverse(_ str: String) -> String {
+
+  let str_rev = String(str.reversed())
+  return str_rev
+
+}
+
+print(FirstReverse(readLine(stripNewline: true)));
