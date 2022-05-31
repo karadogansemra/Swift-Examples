@@ -1,0 +1,22 @@
+func FirstFactorial(_ num: Int) -> Int {
+  var sonuc = 1  
+ // Long veri tipinde, 1 değerine eşit "sonuc" isimli bir değişken oluşturuyoruz.  
+ var index:Int = 0
+ index = num
+ print(index)
+ while (index>0){  
+    // Sayi değişkeni 0'dan büyük olduğu sürece döngü tekrarlanacak.  
+      
+    sonuc = sonuc*index  
+    // Sonuc değişkeni ile sayi değişkeni çarpılıp sonuc değişkenine atıyoruz.  
+      
+    index = index-1 
+    // Sayi değişkeninin değeri bir azaltılıyor.  
+      
+  }  
+  return sonuc
+
+}
+
+// keep this function call here   
+print(FirstFactorial(readLine(stripNewline: true)));
