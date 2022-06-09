@@ -1,0 +1,39 @@
+import Foundation
+import Glibc
+ 
+let player = ["rock", "paper", "scissors", "lizard", "spock"]
+ 
+srandom(UInt32(NSDate().timeIntervalSince1970))
+for count in 1...3 {
+    print(count)
+}
+ 
+print(player[random() % player.count]);
+
+
+// İlk karakteri bulduğu indexi döndürür
+func firstCharacter(_ names: [String]) -> Int {
+    var index:Int = 0
+    
+    guard names.isEmpty else {
+        
+        for name in names{
+           
+            if(name.first == "p"){
+                let _ = String(index)
+                print("Bulundu : \(index)")
+                return index
+            }
+            
+            index = index + 1
+        }
+        
+        return -1
+        //return "Bulunamadı! :("
+    }
+    
+    return 0
+    //return "Array is Empty!"
+}
+
+print(firstCharacter(player))
