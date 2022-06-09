@@ -1,0 +1,30 @@
+import Foundation
+
+func removeSpecialCharsFromString(text: String) -> String {
+    let okayChars = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
+    return text.filter {okayChars.contains($0) }
+}
+
+func LongestWord(_ sen: String) -> String {
+
+  // code goes here   
+  // Note: feel free to modify the return type of this function 
+  guard sen.isEmpty else{
+
+    var noneSen = removeSpecialCharsFromString(text : sen)
+    
+    let arraySen = noneSen.split(separator: " ")
+    if let max = arraySen.max(by: {$1.count > $0.count}) {
+     
+      return String(max)
+    }
+    
+    return ""
+  }
+
+  return "Input string is empty"
+
+}
+
+// keep this function call here   
+print(LongestWord(readLine(stripNewline: true)));
